@@ -18,7 +18,7 @@ const MainContent = ({
       <div className="flex-grow text-gray-100  ">
         <div className="border-white/25 border-1 p-5 md:p-8 rounded-lg h-140 md-full">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-xl font-medium flex items-center gap-2">
+            <h2 className="md:text-xl font-medium flex items-center gap-2">
               <span role="img" aria-label="music-note"></span>
               <IoMusicalNotesOutline />
               Daftar Surat Al-Quran
@@ -64,10 +64,10 @@ const MainContent = ({
         </div>
 
         <div className="border-1 border-white/25 px-2 py-4 md:p-6 rounded-lg text-center mt-5">
-          <h3 className="text-lg font-semibold mb-2 text-white">
+          <h3 className="md:text-lg font-semibold mb-2 text-white">
             Kualitas Audio Tinggi
           </h3>
-          <p className="text-sm text-white/50">
+          <p className="md:text-sm text-xs text-white/50">
             Nikmati tilawah Al-Quran dengan kualitas audio terbaik dari 5 qari
             pilihan dunia. Klik pada surat untuk memulai pemutaran.
           </p>

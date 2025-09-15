@@ -10,9 +10,9 @@ type titleType = {
 const Title = ({ title, deskripsi, sizeTitle, sizeDeskripi }: titleType) => {
   const letters = Array.from(title);
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col  items-center ">
       <h1
-        className={`${sizeTitle} font-bold w-89 md:w-200 bg-gradient-to-r break-words from-green-400 to-blue-500 bg-clip-text text-transparent flex flex-wrap justify-center`}
+        className={`${sizeTitle} mx-5  w-89 font-bold  md:w-200 bg-gradient-to-r break-words from-green-400 to-blue-500 bg-clip-text text-transparent flex flex-wrap justify-center`}
       >
         {letters.map((char, i) => (
           <motion.span

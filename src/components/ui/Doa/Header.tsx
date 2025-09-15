@@ -59,7 +59,7 @@ const Header = ({
                   setIsKategoriOpen(false);
                   setLabel("Semua Kategori");
                 }}
-                className="py-2 cursor-pointer hover:bg-white/7 px-5 flex justify-between"
+                className="py-2  cursor-pointer hover:bg-white/7 px-5 flex justify-between"
               >
                 Semua Kategori
                 {label === "Semua Kategori" && (

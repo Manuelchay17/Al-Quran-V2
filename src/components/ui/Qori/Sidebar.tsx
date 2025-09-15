@@ -22,13 +22,13 @@ const Sidebar = ({
 
   return (
     <aside className="border-1 border-white/25 md:p-8  p-5 px-7  md:w-[30%] text-gray-100 rounded-lg md:h-170">
-      <h2 className="text-2xl font-semibold mb-5">Pilih Qari</h2>
+      <h2 className="md:text-2xl text-md font-semibold mb-5">Pilih Qari</h2>
 
       <div>
         {/* Qory  */}
         <div>
           <div className="flex items-center space-x-2 mt-1">
-            <p>Qory :</p>
+            <p className="text-sm">Qory :</p>
             <div
               onClick={() => {
                 setQoryIsOpen(!qoryIsOpen);

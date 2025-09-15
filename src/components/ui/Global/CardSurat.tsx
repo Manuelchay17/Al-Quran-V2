@@ -24,14 +24,14 @@ const CardSurat = () => {
 
   return (
     <div className="px-4 md:px-20">
-      <div className="flex justify-center  mt-8 mb-9">
+      <div className="flex justify-center mt-3 nd:mt-8 md:mb-9 mb-6">
         <div className="relative w-full  max-w-2xl ">
           <CiSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-xl text-gray-400" />
           <input
             onChange={(e) => setSearch(e.target.value)}
             type="text"
             placeholder="Cari surat..."
-            className="w-full pl-12 pr-4 py-3 border border-white/50 text-gray-300 rounded-lg outline-none focus:border-white/90 transition-colors"
+            className="w-full pl-12 md:pr-4 md:py-3 px-2 py-2 border border-white/50 text-gray-300 rounded-lg outline-none focus:border-white/90 transition-colors"
           />
         </div>
       </div>
@@ -72,10 +72,10 @@ const CardSurat = () => {
       </div>
 
       {(filteredData ?? []).length > 6 && (
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-5 md:mt-8">
           <button
             onClick={handleClick}
-            className="px-6 py-2 border border-white/50 cursor-pointer rounded-lg hover:bg-white/10 transition-colors"
+            className="md:px-6 md:py-2 py-1 px-3 border border-white/50 cursor-pointer rounded-lg hover:bg-white/10 transition-colors"
           >
             {showAll ? "Tampilkan Lebih Sedikit" : "Lihat Semua"}
           </button>

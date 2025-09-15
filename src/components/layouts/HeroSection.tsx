@@ -4,12 +4,11 @@ import Title from "../ui/Global/Title";
 import Card from "../ui/Global/Card";
 
 import CardSurat from "../ui/Global/CardSurat";
-import { useState } from "react";
 
 const HeroSection = () => {
   return (
     <div className="w-full">
-      <div className="flex flex-col items-center justify-center pt-20 pb-10">
+      <div className="flex flex-col  items-center justify-center  pt-15 ">
         <Title
           sizeTitle="md:text-5xl text-3xl"
           sizeDeskripi="md:text-lg"
@@ -22,11 +21,9 @@ const HeroSection = () => {
         <Card />
       </div>
 
-      <div className="mt-16">
-        <h1 className="md:text-3xl text-2xl text-center">
-          Cari Surat Al-Quran
-        </h1>
-        <p className="md:text-lg text-md text-white/50 text-center mt-2">
+      <div className="md:mt-10 mt-7">
+        <h1 className="md:text-3xl text-xl text-center">Cari Surat Al-Quran</h1>
+        <p className="md:text-lg text-sm text-white/50 text-center mt-2">
           Cari berdasarkan nama surat, nomor, atau arti
         </p>
         <CardSurat />
