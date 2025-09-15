@@ -26,7 +26,7 @@ const Header = ({
         <div className="text-center mb-10">
           <Title
             sizeTitle=" text-3xl md:text-5xl"
-            sizeDeskripi="text-sm md:text-md"
+            sizeDeskripi="text-sm md:text-lg"
             title="Kumpulan Doa Harian"
             deskripsi="Kumpulan doa-doa harian dalam Islam lengkap dengan teks Arab, transliterasi, dan terjemahan bahasa Indonesia"
           />
