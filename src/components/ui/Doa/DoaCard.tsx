@@ -1,13 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
-import { FiBookOpen, FiShare2 } from "react-icons/fi";
+import React, { useEffect } from "react";
+import { FiBookOpen } from "react-icons/fi";
 import { TDataDoa } from "@/types/ApiTypes/doa";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// ..
-AOS.init();
 
 const DoaCard = ({
   searchInput,
@@ -18,6 +16,10 @@ const DoaCard = ({
   data: TDataDoa[];
   filterKategori: string;
 }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const displayData = data.filter((data) =>
     data.grup.toLowerCase().includes(filterKategori.toLowerCase())
   );
