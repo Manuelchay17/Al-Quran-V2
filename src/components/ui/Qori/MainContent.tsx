@@ -16,7 +16,7 @@ const MainContent = ({
   return (
     <main>
       <div className="flex-grow text-gray-100  ">
-        <div className="border-white/25 border-1 p-5 md:p-8 rounded-lg h-140 md:w-280">
+        <div className="border-white/25 border-1 p-5 md:p-8 rounded-lg h-140 md-full">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-xl font-medium flex items-center gap-2">
               <span role="img" aria-label="music-note"></span>

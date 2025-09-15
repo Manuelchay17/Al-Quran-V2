@@ -21,7 +21,7 @@ const Sidebar = ({
   console?.log(Qory);
 
   return (
-    <aside className="border-1 border-white/25 md:p-8  p-5 px-7  md:w-110 text-gray-100 rounded-lg md:h-170">
+    <aside className="border-1 border-white/25 md:p-8  p-5 px-7  md:w-[30%] text-gray-100 rounded-lg md:h-170">
       <h2 className="text-2xl font-semibold mb-5">Pilih Qari</h2>
 
       <div>
@@ -42,7 +42,7 @@ const Sidebar = ({
           <div
             className={`${
               !qoryIsOpen ? "hidden" : ""
-            } ml-13 mt-2  w-58  rounded-lg border-1 scrollbar-thin scrollbar-thumb-white/15 scrollbar-track-white/1  absolute overflow-y-auto max-h-90 border-white/20  bg-black z-10`}
+            } ml-13 mt-2   rounded-lg border-1 scrollbar-thin scrollbar-thumb-white/15 scrollbar-track-white/1  absolute overflow-y-auto max-h-90 border-white/20  bg-black z-10`}
           >
             {dataQory.map((dataQory) => (
               <div

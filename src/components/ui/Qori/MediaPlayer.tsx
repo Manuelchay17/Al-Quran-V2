@@ -49,7 +49,7 @@ const MediaPlayer = ({
     <div
       className={`${
         !isAudioOpen ? "hidden" : ""
-      } border-white/20 border-y-1  bg-[#0a0a0a]  md:p-10 p-5 md:px-20 z-9999  fixed bottom-0 left-0 right-0  text-white  flex items-center justify-between rounded-lg`}
+      } border-white/20 border-y-1  bg-[#0a0a0a]  md:p-10 py-5 md:px-20 z-9999  fixed bottom-0 left-0 right-0  text-white  flex items-center justify-between rounded-lg`}
     >
       {/* Audio play */}
       <audio
@@ -59,19 +59,21 @@ const MediaPlayer = ({
         src={dataDetailSurat?.audioFull[Qory]}
       ></audio>
       {/* Track Info Section */}
-      <div className=" mx-auto ">
-        <div className="flex justify-between md:px-8 mb-5 px-2">
-          <div className=" flex items-center space-x-4">
+      <div className="w-full flex flex-col items-center justify-center lg:flex-row lg:items-end">
+        <div className="flex justify-between w-full px-12 md:px-8  ">
+          <div className=" flex items-center jus md:space-x-4">
             <div className="bg-teal-600 p-3 rounded-full  hidden md:block">
               <p className="md:text-3xl">
                 <IoVolumeMediumOutline />
               </p>
             </div>
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2">
               <h3 className="text-lg font-semibold">
                 {dataDetailSurat?.namaLatin}
               </h3>
-              <p className="text-sm text-gray-400">{dataDetailSurat?.arti}</p>
+              <p className="text-sm text-gray-400 hidden md:block">
+                {dataDetailSurat?.arti}
+              </p>
             </div>
           </div>
           <div
@@ -88,7 +90,7 @@ const MediaPlayer = ({
 
         {/* Main Controls Section */}
         <div className="md:flex-1 mt-2  md:flex md:flex-col items-center md:mx-8 md:space-y-2">
-          <div className="flex w-50 ml-20 items-center justify-center space-x-6 text-gray-400 mb-4">
+          <div className="flex  items-center justify-center space-x-6 text-gray-400 mb-4">
             <BsShuffle className="text-lg cursor-pointer hover:text-white" />
             <FaStepBackward
               className="text-lg cursor-pointer hover:text-white"
@@ -122,7 +124,7 @@ const MediaPlayer = ({
           </div>
 
           {/* Progress Bar */}
-          <div className="md:w-[900px] w-89 flex items-center space-x-4">
+          <div className="md:w-[900px]  flex items-center space-x-4">
             <span className="text-xs text-gray-400">
               {formatTime(currentTime)}
             </span>

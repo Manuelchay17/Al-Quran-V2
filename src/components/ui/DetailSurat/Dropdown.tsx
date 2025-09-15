@@ -1,7 +1,7 @@
 import React from "react";
 import { FiChevronDown } from "react-icons/fi";
 
-const Dropdown = ({ label }: { label: string }) => {
+const Dropdown = ({ label }: { label: string | React.ReactNode }) => {
   return (
     <div className="relative">
       <button

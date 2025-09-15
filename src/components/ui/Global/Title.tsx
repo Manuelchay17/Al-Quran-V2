@@ -26,7 +26,7 @@ const Title = ({ title, deskripsi, sizeTitle, sizeDeskripi }: titleType) => {
         ))}
       </h1>
       <p
-        className={`${sizeDeskripi} text-white/45 text-center w-100 md:w-250 px-3 md:max-w-xl mt-4`}
+        className={`${sizeDeskripi} text-white/45 text-center w-90 md:w-250 px-3 md:max-w-xl mt-4`}
       >
         {deskripsi}
       </p>

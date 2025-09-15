@@ -129,7 +129,7 @@ const MainContent = ({
       </div>
 
       {/* Fitur */}
-      <div className="grid grid-cols-2 md:flex space-x">
+      <div className="flex md:relative space-x">
         {/* Dropdown Ayat */}
         <div>
           <div className="flex ml-2 items-center space-x-1 mt-5 md:mr-3 w-40 md:w-46">
@@ -161,39 +161,49 @@ const MainContent = ({
           </div>
         </div>
         {/* Qory  */}
-        <div>
-          <div className="flex items-center  mt-5 -ml-8 space-x-1">
+        <div className="relative">
+          <div className="flex items-center  mt-5  space-x-1">
             <p className="text-sm">Qory :</p>
             <div
               onClick={() => {
                 setQoryIsOpen(!qoryIsOpen);
               }}
-              className="md:w-58 w-42 cursor-pointer"
+              className="md:w-45 w-32 cursor-pointer"
             >
               <div className="text-sm">
-                <Dropdown label={labelQory} />
+                <Dropdown
+                  label={
+                    <>
+                      <span className="sm:hidden">
+                        {labelQory.length > 8
+                          ? `${labelQory.slice(0, 8)}...`
+                          : labelQory}
+                      </span>
+                      <span className="hidden sm:inline">{labelQory}</span>
+                    </>
+                  }
+                />
               </div>
             </div>
-          </div>
-
-          <div
-            className={`${
-              !qoryIsOpen ? "hidden" : ""
-            }  ml-3 mt-2  md:w-58  rounded-lg border-1 scrollbar-thin scrollbar-thumb-white/15 scrollbar-track-white/1  absolute overflow-y-auto max-h-90 border-white/20  bg-black z-10`}
-          >
-            {dataQory.map((dataQory) => (
-              <div
-                onClick={() => {
-                  setLabelQory(dataQory.nama);
-                  setQoryIsOpen(false);
-                  setQory(dataQory.id);
-                }}
-                className="py-2 cursor-pointer flex   justify-between hover:bg-white/11 px-5"
-                key={dataQory.id}
-              >
-                {dataQory.nama}
-              </div>
-            ))}
+            <div
+              className={`${
+                !qoryIsOpen ? "hidden" : ""
+              }   mt-2 top-12 right-0 md:w-58 w-37 rounded-lg border-1 scrollbar-thin scrollbar-thumb-white/15 scrollbar-track-white/1  absolute overflow-y-auto max-h-90 border-white/20  bg-black z-10`}
+            >
+              {dataQory.map((dataQory) => (
+                <div
+                  onClick={() => {
+                    setLabelQory(dataQory.nama);
+                    setQoryIsOpen(false);
+                    setQory(dataQory.id);
+                  }}
+                  className="py-2 cursor-pointer flex   justify-between hover:bg-white/7 px-5"
+                  key={dataQory.id}
+                >
+                  {dataQory.nama}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

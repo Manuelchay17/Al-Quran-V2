@@ -24,7 +24,7 @@ const DoaPage = () => {
   if (isLoading) return <p>Sedang loading...</p>;
   if (!data) return <p>data kosong</p>;
   return (
-    <div className="md:w-350 md:mx-auto   grid grid-cols-1">
+    <div className="md:w-full md:mx-auto md:p-10  grid grid-cols-1">
       <Header
         data={data}
         setSearchInput={setSearchInput}

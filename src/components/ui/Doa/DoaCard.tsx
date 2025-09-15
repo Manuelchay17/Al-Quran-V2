@@ -36,7 +36,7 @@ const DoaCard = ({
           data-aos-delay="20"
           data-aos-duration="800"
           key={doa.id}
-          className="md:w-md w-90 mx-5 md:mx-0 transition-all duration-300 hover:scale-105  justify-between  flex-col flex rounded-lg shadow-lg p-6 text-gray-200 border border-white/20"
+          className=" lg:w-[30%] mx-4 md:mx-0 transition-all duration-300 hover:scale-105  justify-between  flex-col flex rounded-lg shadow-lg p-6 text-gray-200 border border-white/20"
         >
           {/* Header */}
           <h2 className="text-2xl pb-5 text-center mb-5 border-b-1 border-white/30 font-bold text-green-400">
@@ -51,7 +51,7 @@ const DoaCard = ({
           {/* Tombol Aksi */}
           <div className="flex justify-center space-x-4">
             <Link href={`Doa/${doa.id}`}>
-              <button className="cursor-pointer flex-1 w-80 flex items-center justify-center font-bold bg-green-600   px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+              <button className="cursor-pointer flex-1 w-60 md:w-80 flex items-center justify-center font-bold bg-green-600   px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
                 <FiBookOpen className="mr-2 font-bold text-xl" />
                 Baca
               </button>

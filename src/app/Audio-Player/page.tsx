@@ -31,7 +31,7 @@ const AudioPage = () => {
         sizeDeskripi="text-md"
         sizeTitle="text-5xl"
       />
-      <div className="justify-center grid grid-cols-1 md:flex pt-5 px-2 md:px-8 gap-8 bg-[#0d0d0d] text-white">
+      <div className="justify-center grid grid-cols-1 md:flex  pt-5 px-2 md:px-8 gap-8 bg-[#0d0d0d] text-white">
         <Sidebar
           labelQory={labelQory}
           setQoryIsOpen={setQoryIsOpen}
