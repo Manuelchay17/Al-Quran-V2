@@ -8,7 +8,7 @@ import CardSurat from "../ui/Global/CardSurat";
 const HeroSection = () => {
   return (
     <div className="w-full">
-      <div className="flex flex-col  items-center justify-center  pt-15 ">
+      <div className="flex flex-col   items-center justify-center  pt-15 ">
         <Title
           sizeTitle="md:text-5xl text-3xl"
           sizeDeskripi="md:text-lg"
