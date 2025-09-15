@@ -8,22 +8,26 @@ type titleType = {
 };
 
 const Title = ({ title, deskripsi, sizeTitle, sizeDeskripi }: titleType) => {
-  const letters = Array.from(title);
+  const words = title.split(" ");
+
   return (
-    <div className="flex flex-col  items-center ">
+    <div className="flex flex-col items-center">
       <h1
-        className={`${sizeTitle} w-88 font-bold md:w-200 bg-gradient-to-r break-words from-green-400 to-blue-500 bg-clip-text text-transparent text-center leading-tight`}
+        className={`${sizeTitle} w-88 font-bold md:w-200 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent text-center leading-tight`}
       >
-        {letters.map((char, i) => (
-          <motion.span
-            key={i}
-            className="inline-block"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.2, delay: i * 0.05 }}
-          >
-            {char === " " ? "\u00A0" : char}
-          </motion.span>
+        {words.map((word, wi) => (
+          <span key={wi} className="inline-block mr-2">
+            {Array.from(word).map((char, ci) => (
+              <motion.span
+                key={ci}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.2, delay: (wi * 5 + ci) * 0.05 }}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </span>
         ))}
       </h1>
 
