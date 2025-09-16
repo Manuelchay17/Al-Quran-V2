@@ -43,7 +43,7 @@ const MainContent = ({
 
     if (targetAyat && parentContainer) {
       parentContainer.scrollTo({
-        top: targetAyat.offsetTop - parentContainer.offsetTop,
+        top: targetAyat.offsetTop, // langsung ambil posisi relatif ke parent
         behavior: "smooth",
       });
     }
@@ -66,10 +66,17 @@ const MainContent = ({
       setPlayingAyat(nomorAyat);
 
       const targetAyat = ayatRefs.current[nomorAyat];
-      const parent = ayatListRef.current;
-      if (targetAyat && parent) {
-        parent.scrollTo({
-          top: targetAyat.offsetTop - parent.offsetTop,
+      const parentContainer = ayatListRef.current;
+
+      if (targetAyat && parentContainer) {
+        const targetRect = targetAyat.getBoundingClientRect();
+        const parentRect = parentContainer.getBoundingClientRect();
+
+        const scrollPosition =
+          targetRect.top - parentRect.top + parentContainer.scrollTop;
+
+        parentContainer.scrollTo({
+          top: scrollPosition,
           behavior: "smooth",
         });
       }
@@ -219,7 +226,7 @@ const MainContent = ({
       {/* Detail Surat */}
       <div
         ref={ayatListRef}
-        className="flex pr-1 md:pr-3 flex-col gap-5 md:h-260 overflow-y-auto mt-6  scrollbar-hide scrollbar-thin scrollbar-thumb-white/15 scrollbar-track-white/1"
+        className="flex pr-1 md:pr-3 flex-col gap-5 h-screen md:h-260 overflow-y-auto mt-6 scrollbar-hide scrollbar-thin scrollbar-thumb-white/15 scrollbar-track-white/1"
       >
         {dataDetailSurat.ayat.map((ayat) => (
           <div

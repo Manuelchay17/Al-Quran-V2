@@ -9,7 +9,7 @@ const page = () => {
       <div className="my-5 ">
         <Title
           title="Daftar Surat"
-          sizeTitle="text-5xl"
+          sizeTitle="text-3xl md:text-5xl"
           deskripsi="Daftar Surat Dengan , transliterasi, dan terjemahan bahasa Indonesia"
           sizeDeskripi="text-md"
         />
