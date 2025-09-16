@@ -42,8 +42,15 @@ const MainContent = ({
     const parentContainer = ayatListRef.current;
 
     if (targetAyat && parentContainer) {
+      const targetRect = targetAyat.getBoundingClientRect();
+      const parentRect = parentContainer.getBoundingClientRect();
+
+      const offset = 5;
+      const scrollPosition =
+        targetRect.top - parentRect.top + parentContainer.scrollTop - offset;
+
       parentContainer.scrollTo({
-        top: targetAyat.offsetTop,
+        top: scrollPosition,
         behavior: "smooth",
       });
     }
