@@ -43,7 +43,7 @@ const MainContent = ({
 
     if (targetAyat && parentContainer) {
       parentContainer.scrollTo({
-        top: targetAyat.offsetTop, // langsung ambil posisi relatif ke parent
+        top: targetAyat.offsetTop,
         behavior: "smooth",
       });
     }
