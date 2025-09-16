@@ -51,14 +51,14 @@ const DetailDoa = () => {
     <div className="  text-white min-h-screen font-sans p-2 flex flex-col mt-4 ">
       <Link
         href={"/Doa"}
-        className="flex  items-center text-start md:ml-120 space-x-3 py-1 px-3 md:mx-auto hover:bg-white/7 rounded-lg"
+        className="flex w-fit  items-center text-start md:ml-120 space-x-3 py-1 px-3 md:mx-auto hover:bg-white/7 rounded-lg"
       >
         <FaArrowLeft />
         <button className="  ">Kehalaman surat</button>
       </Link>
       <div className="max-w-4xl mt-5 mx-auto space-y-4 border-1 border-white/30 rounded-lg shadow-lg overflow-hidden">
         {/* Header */}
-        <div className="flex bg-green-500/7   items-center justify-between  px-2 py-5 md:p-8 ">
+        <div className="flex bg-green-500/7   items-center justify-between  px-8 py-5 md:p-8 ">
           <div className="flex  items-center space-x-3">
             <div className="w-11 h-11 aspect-square  min-w-[44px] text-2xl bg-green-500/10 rounded-full  flex justify-center items-center text-[#3CB371]">
               <IoBookOutline />
@@ -69,8 +69,8 @@ const DetailDoa = () => {
                 <h1 className="md:text-2xl text-xl font-bold ">{data.nama}</h1>
               </div>
               <div className="flex items-center  space-x-2 ">
-                <div className="flex flex-wrap gap-1">
-                  <span className="bg-[#242424] text-[11px] px-2 py-1 rounded-full border border-gray-600">
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-white/7 text-[11px] px-2 py-1 rounded-full border border-gray-600">
                     {data.grup}
                   </span>
                   {data.tag.map((tag, index) => (
@@ -91,10 +91,8 @@ const DetailDoa = () => {
           <div className="flex items-center space-x-2 text-sm text-gray-300"></div>
         </div>
 
-        {/* Tags */}
-
         {/* Main Content */}
-        <div className="p-4 px-3 md:px-7 space-y-6">
+        <div className="pb-4 px-5 md:px-7 space-y-6">
           {/* Teks Arab Section */}
           <div>
             <h3 className="text-lg font-semibold text-[#3CB371] mb-2 text-center">

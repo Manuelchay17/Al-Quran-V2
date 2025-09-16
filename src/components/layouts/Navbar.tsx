@@ -4,7 +4,6 @@ import Logo from "../ui/Navbar/Logo";
 import NavbarButton from "../ui/Navbar/NavbarButton";
 import NavbarFitur from "@/data/Navbar";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
-import { div } from "framer-motion/client";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -5,7 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 
-const CardSurat = () => {
+const CardSurat = ({ limit = 6 }: { limit?: number }) => {
   const [showAll, setShowAll] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -18,7 +18,7 @@ const CardSurat = () => {
     surat.namaLatin.toLowerCase().includes(search.toLowerCase())
   );
 
-  const displayData = showAll ? filteredData : filteredData?.slice(0, 6);
+  const displayData = showAll ? filteredData : filteredData?.slice(0, limit);
 
   const handleClick = () => setShowAll(!showAll);
 
@@ -40,14 +40,14 @@ const CardSurat = () => {
         <p className="text-center text-gray-400">Tidak ada surat ditemukan.</p>
       )}
 
-      <div className="grid grid-cols-1 md:px-15 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1  md:px-15 md:flex  md:justify-center md:flex-wrap gap-4">
         {displayData?.map((surat) => (
           <Link
             key={surat.nomor}
             href={`/DetailSurat/${surat.nomor}`}
             className="block"
           >
-            <div className="border border-white/20 rounded-lg p-5 flex items-center justify-between transition-all duration-300 hover:scale-105 hover:bg-white/10">
+            <div className="border md:w-110 border-white/20 rounded-lg p-5 flex items-center justify-between transition-all duration-300 hover:scale-105 hover:bg-white/10">
               <div className="flex items-center gap-4">
                 <div className="p-[2px] rounded-full bg-gradient-to-r from-green-400 to-blue-500">
                   <div className="flex items-center justify-center w-10 h-10 rounded-full bg-black text-white font-semibold">

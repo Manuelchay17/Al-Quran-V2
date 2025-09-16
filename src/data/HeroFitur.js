@@ -19,11 +19,6 @@ const HeroFiture = [
     title: "Tafsir Lengkap",
     desc: "Memahami makna dengan tafsir yang mudah dipahami",
   },
-  {
-    icon: <BsPentagon />,
-    title: "Test",
-    desc: "Memahami makna dengan tafsir yang mudah dipahami",
-  },
 ];
 
 export default HeroFiture;

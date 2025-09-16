@@ -17,7 +17,7 @@ const HeroSection = () => {
         />
       </div>
 
-      <div className="md:flex flex-col md:h-auto h-auto  md:px-20">
+      <div className="md:flex flex-col  md:h-auto h-auto  md:px-20">
         <Card />
       </div>
 

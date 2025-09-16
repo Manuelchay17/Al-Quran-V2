@@ -219,7 +219,7 @@ const MainContent = ({
       {/* Detail Surat */}
       <div
         ref={ayatListRef}
-        className="flex pr-1 md:pr-3 flex-col gap-5 h-screen overflow-y-auto mt-6  scrollbar-hide scrollbar-thin scrollbar-thumb-white/15 scrollbar-track-white/1"
+        className="flex pr-1 md:pr-3 flex-col gap-5 md:h-260 overflow-y-auto mt-6  scrollbar-hide scrollbar-thin scrollbar-thumb-white/15 scrollbar-track-white/1"
       >
         {dataDetailSurat.ayat.map((ayat) => (
           <div

@@ -151,8 +151,6 @@ const MediaPlayer = ({
             </span>
           </div>
         </div>
-
-        {/* Right-side Controls (Volume, etc.) */}
       </div>
     </div>
   );

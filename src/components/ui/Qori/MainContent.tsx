@@ -23,7 +23,7 @@ const MainContent = ({
               <IoMusicalNotesOutline />
               Daftar Surat Al-Quran
             </h2>
-            <span className="bg-[#3b3b3b] text-gray-400 px-3 py-1 rounded-full text-xs">
+            <span className="bg-white/10 px-3 py-1 rounded-full text-xs">
               114 Surat
             </span>
           </div>

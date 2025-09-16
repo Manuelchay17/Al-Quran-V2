@@ -25,7 +25,7 @@ const Sidebar = ({
 
       {/* Sidebar */}
       <div
-        className="relative md:border-r-1 md:mt-7 bg-[#0a0a0a] border-1 border-white/50 md:border-0 h-150 md:h-300 mt-19 my-10
+        className="relative md:border-r-1 md:mt-7 bg-[#0a0a0a] border-1 border-white/50 md:border-0 h-150 md:h-318 mt-19 md:my-0 my-10
         w-86 mx-auto md:w-75 z-50 overflow-hidden"
       >
         {/* Header */}

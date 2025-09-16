@@ -78,11 +78,11 @@ const DetailSurat = () => {
       </div>
       {/* Button Navigasi Surat */}
       {!sidebarOpen && (
-        <div className="flex px-5 pt-3 md:py-5 justify-end">
-          <div className="flex justify-between">
+        <div className="md:flex pt-5 md:py-5 md:justify-end">
+          <div className="flex justify-evenly">
             {dataDetailSurat?.suratSebelumnya !== false && (
               <Link href={`${dataDetailSurat?.suratSebelumnya.nomor}`}>
-                <button className="rounded-lg border-1 border-white/30 w-45 cursor-pointer hover:border-white/50 flex justify-center gap-2 items-center h-8 mx-4">
+                <button className="rounded-lg border-1 border-white/30 text-sm md:w-45 px-3 cursor-pointer hover:border-white/50 flex justify-center gap-2 items-center h-8 md:mx-4">
                   <FaArrowLeft /> Surat Sebelumnya
                 </button>
               </Link>
@@ -90,7 +90,7 @@ const DetailSurat = () => {
 
             {dataDetailSurat?.suratSelanjutnya && (
               <Link href={`${dataDetailSurat?.suratSelanjutnya.nomor}`}>
-                <button className="rounded-lg border-1 border-white/30 w-45 text-sm  cursor-pointer hover:border-white/50 h-8 mx-2 md:mx-4 flex justify-center gap-2 items-center">
+                <button className="rounded-lg border-1 border-white/30 md:w-45 px-3 text-sm  cursor-pointer hover:border-white/50 h-8  md:mx-4 flex justify-center gap-2 items-center">
                   Surat Selanjutnya <FaArrowRight />
                 </button>
               </Link>

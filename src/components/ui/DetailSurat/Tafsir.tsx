@@ -35,12 +35,19 @@ export default function TafsirCard({
   console.log(tafsirAyat);
   return (
     <div>
+      {/* Overlay */}
       <div
-        className={`   fixed inset-0 z-50 flex items-center justify-center bg-black/50 transition-opacity duration-300 ${
+        onClick={() => setIsOpen(false)}
+        className={`fixed inset-0 bg-black transition-opacity duration-300 ${
+          isOpen ? "visible opacity-70 z-50" : "invisible opacity-0"
+        }`}
+      />
+      <div
+        className={` m-5  mt-12 fixed inset-0 z-999 flex items-center justify-center  transition-opacity duration-300 ${
           isOpen ? "visible opacity-100" : "invisible opacity-0"
         }`}
       >
-        <div className="bg-[#111]  text-white w-full border-1 border-white/50 max-w-3xl rounded-2xl shadow-lg p-6 relative">
+        <div className="bg-[#0a0a0a]  text-white w-full border-1 border-white/50 max-w-3xl rounded-2xl shadow-lg p-6 relative">
           {/* Close Button */}
           <button
             onClick={() => setIsOpen(false)}

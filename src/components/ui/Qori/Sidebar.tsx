@@ -42,7 +42,7 @@ const Sidebar = ({
           <div
             className={`${
               !qoryIsOpen ? "hidden" : ""
-            } ml-13 mt-2   rounded-lg border-1 scrollbar-thin scrollbar-thumb-white/15 scrollbar-track-white/1  absolute overflow-y-auto max-h-90 border-white/20  bg-black z-10`}
+            } ml-13 mt-2   rounded-lg border-1 scrollbar-thin scrollbar-thumb-white/15 scrollbar-track-white/1  absolute overflow-y-auto max-h-90 border-white/20  bg-[#0a0a0a] z-10`}
           >
             {dataQory.map((dataQory) => (
               <div
@@ -51,7 +51,7 @@ const Sidebar = ({
                   setQoryIsOpen(false);
                   setQory(dataQory.id);
                 }}
-                className="py-2 cursor-pointer flex   justify-between hover:bg-white/11 px-5"
+                className="py-2 cursor-pointer flex bg-[#0a0a0a]  justify-between hover:bg-white/11 px-5"
                 key={dataQory.id}
               >
                 {dataQory.nama}

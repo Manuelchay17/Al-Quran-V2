@@ -13,7 +13,7 @@ export const SearchBar = ({
       <input
         onChange={(e) => setSearchInput(e.target.value)}
         type="text"
-        placeholder="Cari doa berdasarkan nama, isi, atau kategori..."
+        placeholder="Cari doa berdasarkan nama"
         className="w-full pl-12 pr-4 py-3 rounded-lg bg-black text-gray-200 border border-white/25 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent transition-all"
       />
     </div>
