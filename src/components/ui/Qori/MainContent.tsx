@@ -38,9 +38,7 @@ const MainContent = ({
                 key={surat.nomor}
                 className="flex items-center  gap-4 p-3  rounded-lg border-b-1 border-white/25 cursor-pointer hover:bg-[#222] transition-colors"
               >
-                <div className="text-gray-400 w-6 text-center">
-                  {surat.nomor}
-                </div>
+                <div className="text-white w-6 text-center">{surat.nomor}</div>
                 <div className="flex-grow">
                   <p className="md:text-xl text-white">{surat.namaLatin}</p>
                   <p className="text-xs md:text-sm text-white/50">
@@ -55,7 +53,7 @@ const MainContent = ({
                     </span>
                   </div>
                 </div>
-                <div className=" text-2xl md:text-3xl font-amiri font-bold text-white/50">
+                <div className=" text-2xl md:text-3xl font-amiri font-bold text-[#7f7f7f]">
                   {surat.nama}
                 </div>
               </div>
